@@ -16,21 +16,20 @@ import java.util.List;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static utils.Constantes.URL_BASE;
 
 public class RegistrarMascota implements Task {
 
-    private final String recurso;
     private final Mascota mascota;
 
-    public RegistrarMascota(String recurso, Mascota mascota) {
-        this.recurso = recurso;
+    public RegistrarMascota(Mascota mascota) {
         this.mascota = mascota;
     }
 
     @Step("{0} configura la petición para registrar una nueva mascota en {recurso}")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Post.to(recurso) // Aquí pasamos la parte final de la URL
+                Post.to("") // Aquí pasamos la parte final de la URL
                         .with(requestSpecification ->
                                 requestSpecification
                                         .contentType(ContentType.JSON)
@@ -38,10 +37,12 @@ public class RegistrarMascota implements Task {
                         )
         );
 
+
+        System.out.println("AAA");
         SerenityRest.lastResponse().prettyPrint();
     }
 
-    public static RegistrarMascota enElRecursoConDatos(String recurso, List<Map<String, String>> datos) {
+    public static RegistrarMascota enElRecursoConDatos(List<Map<String, String>> datos) {
         Mascota nuevaMascota = new Mascota();
 
         // Accedemos a la primera fila de datos
@@ -56,7 +57,7 @@ public class RegistrarMascota implements Task {
         nuevaMascota.getTags().get(0).setName(primeraFila.get("Nombre Etiqueta"));
         nuevaMascota.setStatus(primeraFila.get("Estado"));
 
-        return instrumented(RegistrarMascota.class, recurso, nuevaMascota);
+        return instrumented(RegistrarMascota.class, nuevaMascota);
     }
 
 

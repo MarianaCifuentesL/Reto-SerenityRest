@@ -11,7 +11,7 @@ public class ConsumirServicioGet implements Task {
 
     private String recurso;
 
-    public ConsumirServicioGet consumirServicioGet(String recurso) {
+    public ConsumirServicioGet conRecurso(String recurso) {
         this.recurso = recurso;
         return this;
     }

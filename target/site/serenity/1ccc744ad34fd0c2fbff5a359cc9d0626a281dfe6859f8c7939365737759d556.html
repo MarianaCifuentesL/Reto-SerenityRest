@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Registrar una nueva mascota</title>
+    <title>Eliminar una mascota por su ID</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -126,7 +126,7 @@
             Gesti&oacute;n de mascotas en Swagger Petstore
         </a>
         >
-            Registrar una nueva mascota
+            Eliminar una mascota por su ID
         </span>
         </div>
         <div class="rightbg"></div>
@@ -187,10 +187,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
-                                    Registrar una nueva mascota
+                                <span class="failing-color">
+                                    Eliminar una mascota por su ID
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -247,7 +247,7 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Dado que el usuario tiene acceso al servicio de mascotas<br>Cuando configura la petición para añadir una nueva mascota con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>&lt;idMascota&gt;</td><td>&lt;idCategoria&gt;</td><td>&lt;nombreCategoria&gt;</td><td>&lt;nombreMascota&gt;</td><td>&lt;urlFotos&gt;</td><td>&lt;idEtiqueta&gt;</td><td>&lt;nombreEtiqueta&gt;</td><td>&lt;estado&gt;</td></tr></tbody></table><br>Entonces verifica el estado de la respuesta de dicha petición<br>Y verifica que la mascota fue registrada con los datos "&lt;idMascota&gt;", "&lt;nombreMascota&gt;", "&lt;estado&gt;"</div>
+        <div class="scenario">Dado que el usuario tiene acceso al servicio de mascotas<br>Cuando configura la petición para añadir una nueva mascota con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>&lt;idMascota&gt;</td><td>&lt;idCategoria&gt;</td><td>&lt;nombreCategoria&gt;</td><td>&lt;nombreMascota&gt;</td><td>&lt;urlFotos&gt;</td><td>&lt;idEtiqueta&gt;</td><td>&lt;nombreEtiqueta&gt;</td><td>&lt;estado&gt;</td></tr></tbody></table><br>Y configura la petición para eliminar la mascota con el ID "&lt;idMascota&gt;"<br>Entonces verifica el estado de la respuesta de dicha petición<br>Y verifica que la mascota con ID "&lt;idMascota&gt;" ha sido eliminada correctamente</div>
 
     </div>
 
@@ -278,29 +278,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="test-SUCCESS"><a href="#0">1</a></td>
-                            <td class="test-SUCCESS"><a
+                        <td class="test-FAILURE"><a href="#0">1</a></td>
+                            <td class="test-FAILURE"><a
+                                        href="#0">101</a>
+                            </td>
+                            <td class="test-FAILURE"><a
+                                        href="#0">2</a>
+                            </td>
+                            <td class="test-FAILURE"><a
+                                        href="#0">Gatos</a>
+                            </td>
+                            <td class="test-FAILURE"><a
+                                        href="#0">Milo</a>
+                            </td>
+                            <td class="test-FAILURE"><a
+                                        href="#0">url2</a>
+                            </td>
+                            <td class="test-FAILURE"><a
                                         href="#0">1</a>
                             </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">1</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">Perros</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">Max</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">url1</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
-                                        href="#0">1</a>
-                            </td>
-                            <td class="test-SUCCESS"><a
+                            <td class="test-FAILURE"><a
                                         href="#0">Rescatado</a>
                             </td>
-                            <td class="test-SUCCESS"><a
+                            <td class="test-FAILURE"><a
                                         href="#0">available</a>
                             </td>
                     </tr>
@@ -325,13 +325,13 @@
                 <td colspan="5"></td>
             </tr>
 
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
 
                     <td width="50" class="step-icon">
                         <a name="0"></a>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection0 success-icon"
+                                <i class="bi bi-caret-right-square imgstepSection0 failure-icon"
                                    style="margin-left: 20px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
@@ -341,7 +341,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                1: Registrar una nueva mascota ({idMascota=1, idCategoria=1, nombreCategoria=Perros, nombreMascota=Max, urlFotos=url1, idEtiqueta=1, nombreEtiqueta=Rescatado, estado=available})
+                                                1: Eliminar una mascota por su ID ({idMascota=101, idCategoria=2, nombreCategoria=Gatos, nombreMascota=Milo, urlFotos=url2, idEtiqueta=1, nombreEtiqueta=Rescatado, estado=available})
                                         </span>
                             </a>
                             <span class="evidence">
@@ -349,8 +349,8 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">4s 418ms</span></td>
+                    <td width="130"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">1s 648ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -375,7 +375,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">081ms</span></td>
+                    <td width="100"><span class="nested-group-step">003ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -393,7 +393,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Cuando configura la petición para añadir una nueva mascota con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>1</td><td>1</td><td>Perros</td><td>Max</td><td>url1</td><td>1</td><td>Rescatado</td><td>available</td></tr></tbody></table>
+                                                Cuando configura la petición para añadir una nueva mascota con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>101</td><td>2</td><td>Gatos</td><td>Milo</td><td>url2</td><td>1</td><td>Rescatado</td><td>available</td></tr></tbody></table>
                                         </span>
                             </a>
                             <span class="evidence">
@@ -402,7 +402,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">3s 496ms</span></td>
+                    <td width="100"><span class="nested-step">504ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -432,7 +432,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">3s 348ms</span></td>
+                    <td width="100"><span class="nested-step">496ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -462,7 +462,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">3s 232ms</span></td>
+                    <td width="100"><span class="nested-step">483ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -501,11 +501,11 @@
                                     <h4>Request Headers</h4>
                                     <pre>Accept=*/*<br>Content-Type=application/json</pre>
                                     <h4>Content Body</h4>
-                                    <pre>{<br>    &quot;id&quot;: 1,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 1,<br>        &quot;name&quot;: &quot;Perros&quot;<br>    },<br>    &quot;name&quot;: &quot;Max&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url1&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;id&quot;: 101,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Date: Thu, 13 Mar 2025 23:27:07 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                    <pre>Date: Thu, 13 Mar 2025 23:27:09 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
                                 <h4>Response Body</h4>
-                                    <pre>{<br>    &quot;id&quot;: 1,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 1,<br>        &quot;name&quot;: &quot;Perros&quot;<br>    },<br>    &quot;name&quot;: &quot;Max&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url1&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;id&quot;: 101,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Cookies</h4>
                                     <pre></pre>
                             </div>
@@ -536,6 +536,159 @@
 
                     <td width="70" class="step-icon">
                         <a name="0-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Y configura la petición para eliminar la mascota con el ID "101"
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">522ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-2-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-2-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Mariana y Alexis elimina la mascota con ID 101
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">510ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-2-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-2-0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-2-0-0 success-icon"
+                                   style="margin-left: 80px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Mariana y Alexis executes a DELETE on the resource 101
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">488ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-2-0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="130" class="step-icon">
+                        <a name="0-2-0-0-0"></a>
+                            <span style="margin-left: 100px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                DELETE https://petstore.swagger.io/v2/pet/101
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-10">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-10">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://petstore.swagger.io/v2/pet/101</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Date: Thu, 13 Mar 2025 23:27:10 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;type&quot;: &quot;unknown&quot;,<br>    &quot;message&quot;: &quot;101&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-3"></a>
                             <span style="margin-left: 40px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
@@ -552,25 +705,123 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">071ms</span></td>
+                    <td width="100"><span class="nested-group-step">001ms</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
 
                     <td width="70" class="step-icon">
-                        <a name="0-3"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-3')"
+                        <a name="0-4"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection0-3 success-icon"
+                                <i class="bi bi-caret-right-square imgstepSection0-4 failure-icon"
                                    style="margin-left: 40px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-3')"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Y verifica que la mascota fue registrada con los datos "1", "Max", "available"
+                                                Y verifica que la mascota con ID "101" ha sido eliminada correctamente
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">FAILURE</span></td>
+                    <td width="100"><span class="nested-step">615ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-4" class="step-table-nested" style="display:none;">
+                <tr class="test-FAILURE">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-4-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-4-0 failure-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Then La mascota ya no existe en la API
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">FAILURE</span></td>
+                    <td width="100"><span class="nested-step">519ms</span></td>
+                </tr>
+                    <tr class="test-FAILURE">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">java.lang.AssertionError: Expected mascota no existe<br>Expected: is &lt;true&gt;<br>     but: was &lt;false&gt;</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-13"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-13">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>stepdefinitions.SwaggerPetstoreStepDefinition.verificaQueLaMascotaHaSidoEliminadaCorrectamente(SwaggerPetstoreStepDefinition.java:92)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-4-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-4-0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4-0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-4-0-0 success-icon"
+                                   style="margin-left: 80px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4-0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Mariana y Alexis consulta la información de la mascota con ID 101 en el recurso #recurso
                                         </span>
                             </a>
                             <span class="evidence">
@@ -579,16 +830,46 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">717ms</span></td>
+                    <td width="100"><span class="nested-step">498ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
-                            <table id="stepSection0-3" class="step-table-nested" style="display:none;">
+                            <table id="stepSection0-4-0-0" class="step-table-nested" style="display:none;">
                 <tr class="test-SUCCESS">
 
-                    <td width="90" class="step-icon">
-                        <a name="0-3-0"></a>
-                            <span style="margin-left: 60px;"
+                    <td width="130" class="step-icon">
+                        <a name="0-4-0-0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4-0-0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-4-0-0-0 success-icon"
+                                   style="margin-left: 100px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4-0-0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Mariana y Alexis executes a GET on the resource 101
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">485ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-4-0-0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="150" class="step-icon">
+                        <a name="0-4-0-0-0-0"></a>
+                            <span style="margin-left: 120px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
@@ -596,15 +877,44 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Then Los datos de la mascota registrada son correctos
+                                                GET https://petstore.swagger.io/v2/pet/101
                                         </span>
                             <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-16">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-16">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://petstore.swagger.io/v2/pet/101</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Date: Thu, 13 Mar 2025 23:27:10 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;id&quot;: 101,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
                                 </span>
                         </div>
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">583ms</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
 
                             </table>
@@ -614,10 +924,22 @@
                             </table>
                         </td>
                     </tr>
-            <tr class="test-SUCCESS">
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-FAILURE">
                     <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>4.42s</em></span></td>
+                <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.65s</em></span></td>
             </tr>
 
         </table>
