@@ -9,8 +9,7 @@ import static stepdefinitions.EstablecerServicio.actor;
 
 public class GetPetStepDefinition {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DeletePetStepDefinition.class);
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(GetPetStepDefinition.class);
 
     @Y("crea una petición para consultar la mascota con el ID {string} en el recurso {string}")
     public void creaUnaPeticiónParaConsultarLaMascotaConElIDEnElRecurso(String idMascota, String recurso) {

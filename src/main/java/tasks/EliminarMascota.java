@@ -23,7 +23,6 @@ public class EliminarMascota implements Task {
         actor.attemptsTo(
                 DeletePeticion.deletePeticion(recurso + "/" + idMascota)
         );
-
     }
 
     public static EliminarMascota conId(String idMascota, String recurso) {

@@ -16,7 +16,6 @@ public class ConsultarMascota implements Task {
         this.recurso = recurso;
     }
 
-
     @Override
     @Step("{0} consulta la mascota con ID #idMascota")
     public <T extends Actor> void performAs(T actor) {
@@ -24,7 +23,6 @@ public class ConsultarMascota implements Task {
         actor.attemptsTo(
                 GetPeticion.getPeticion(recurso + "/" + idMascota)
         );
-
     }
 
     public static ConsultarMascota conId(String idMascota, String recurso) {

@@ -40,6 +40,4 @@ public class CrearMascota implements Task {
 
         return instrumented(CrearMascota.class, recurso, nuevaMascota);
     }
-
-
 }

@@ -15,7 +15,6 @@ public class Mascota {
         this.tags = List.of(new Etiqueta());
     }
 
-    // Getters y Setters
     public long getId() { return id; }
     public void setId(Integer id) { this.id = id; }
 

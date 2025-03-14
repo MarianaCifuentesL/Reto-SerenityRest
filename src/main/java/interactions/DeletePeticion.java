@@ -3,7 +3,6 @@ package interactions;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.interactions.RestInteraction;
-
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.rest.abilities.CallAnApi.as;
 
@@ -26,7 +25,7 @@ public class DeletePeticion extends RestInteraction {
                 log().all();
     }
 
-    public static GetPeticion deletePeticion(String recurso) {
-        return instrumented(GetPeticion.class, recurso);
+    public static DeletePeticion deletePeticion(String recurso) {
+        return instrumented(DeletePeticion.class, recurso);
     }
 }
