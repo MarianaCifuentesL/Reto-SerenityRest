@@ -1,7 +1,6 @@
 package tasks;
 
 import interactions.DeletePeticion;
-import interactions.GetPeticion;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

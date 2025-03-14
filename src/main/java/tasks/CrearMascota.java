@@ -1,13 +1,10 @@
 package tasks;
 
 import interactions.PostPeticion;
-import io.restassured.http.ContentType;
 import models.Mascota;
 import net.serenitybdd.annotations.Step;
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Post;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -31,10 +28,7 @@ public class CrearMascota implements Task {
 
     public static CrearMascota conDatos(String recurso, List<Map<String, String>> datos) {
         Mascota nuevaMascota = new Mascota();
-
-        // Accedemos a la primera fila de datos
         Map<String, String> primeraFila = datos.get(0);
-
         nuevaMascota.setId(Integer.valueOf(primeraFila.get("Id Mascota")));
         nuevaMascota.getCategory().setId(Integer.valueOf(primeraFila.get("Id Categoría")));
         nuevaMascota.getCategory().setName(primeraFila.get("Nombre Categoría"));

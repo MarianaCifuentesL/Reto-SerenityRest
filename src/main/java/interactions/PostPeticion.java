@@ -1,5 +1,6 @@
 package interactions;
 
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.interactions.RestInteraction;
 
@@ -17,6 +18,7 @@ public class PostPeticion extends RestInteraction {
     }
 
     @Override
+    @Step("{0} realiza una petición POST al recurso #recurso con el cuerpo #body")
     public <T extends Actor> void performAs(T actor) {
         rest()
                 .log().all()

@@ -1,5 +1,6 @@
 package interactions;
 
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.interactions.RestInteraction;
 
@@ -15,6 +16,7 @@ public class GetPeticion extends RestInteraction {
     }
 
     @Override
+    @Step("{0} realiza una petición DELETE al recurso #recurso")
     public <T extends Actor> void performAs(T actor) {
         rest().
                 log().all().
