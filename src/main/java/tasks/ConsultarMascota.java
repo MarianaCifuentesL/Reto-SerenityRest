@@ -1,34 +1,32 @@
 package tasks;
 
+import interactions.GetPeticion;
 import net.serenitybdd.annotations.Step;
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Get;
-
-
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class ConsultarMascota implements Task {
 
     private final String idMascota;
+    private final String recurso;
 
-    public ConsultarMascota(String idMascota) {
+    public ConsultarMascota(String idMascota, String recurso) {
         this.idMascota = idMascota;
+        this.recurso = recurso;
     }
 
-    @Step("{0} consulta la información de la mascota con ID #idMascota en el recurso #recurso")
+    @Step("{0} consulta la mascota con ID #idMascota")
     @Override
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
-                Get.resource(idMascota)
-                        .with(request -> request)
+                GetPeticion.getPeticion(recurso + "/" + idMascota)
         );
 
-        SerenityRest.lastResponse().prettyPrint(); // Muestra la respuesta en consola
     }
 
-    public static ConsultarMascota conId(String idMascota) {
-        return instrumented(ConsultarMascota.class, idMascota);
+    public static ConsultarMascota conId(String idMascota, String recurso) {
+        return instrumented(ConsultarMascota.class, idMascota, recurso);
     }
 }

@@ -147,7 +147,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-03-2025 18:27</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 14-03-2025 00:17</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -247,7 +247,7 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Dado que el usuario tiene acceso al servicio de mascotas<br>Cuando configura la petición para añadir una nueva mascota con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>&lt;idMascota&gt;</td><td>&lt;idCategoria&gt;</td><td>&lt;nombreCategoria&gt;</td><td>&lt;nombreMascota&gt;</td><td>&lt;urlFotos&gt;</td><td>&lt;idEtiqueta&gt;</td><td>&lt;nombreEtiqueta&gt;</td><td>&lt;estado&gt;</td></tr></tbody></table><br>Y configura la petición para consultar la mascota con el ID "&lt;idMascota&gt;"<br>Entonces verifica el estado de la respuesta de dicha petición<br>Y verifica que la información de la mascota consultada es "&lt;idMascota&gt;", "&lt;nombreMascota&gt;", "&lt;estado&gt;"</div>
+        <div class="scenario">Dado que el usuario tiene acceso al servicio de mascotas<br>Cuando crea una petición para añadir una nueva mascota en el recurso "&lt;recurso&gt;" con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>&lt;idMascota&gt;</td><td>&lt;idCategoria&gt;</td><td>&lt;nombreCategoria&gt;</td><td>&lt;nombreMascota&gt;</td><td>&lt;urlFotos&gt;</td><td>&lt;idEtiqueta&gt;</td><td>&lt;nombreEtiqueta&gt;</td><td>&lt;estado&gt;</td></tr></tbody></table><br>Y crea una petición para consultar la mascota con el ID "&lt;idMascota&gt;" en el recurso "&lt;recurso&gt;"<br>Entonces verifica el estado de la respuesta de dicha petición</div>
 
     </div>
 
@@ -266,6 +266,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
+                        <th>Recurso</th>
                         <th>Id Mascota</th>
                         <th>Id Categoria</th>
                         <th>Nombre Categoria</th>
@@ -280,7 +281,10 @@
                     <tr>
                         <td class="test-SUCCESS"><a href="#0">1</a></td>
                             <td class="test-SUCCESS"><a
-                                        href="#0">32346</a>
+                                        href="#0">/pet</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">2403</a>
                             </td>
                             <td class="test-SUCCESS"><a
                                         href="#0">2</a>
@@ -341,7 +345,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                1: Consultar una mascota por su ID ({idMascota=32346, idCategoria=2, nombreCategoria=Gatos, nombreMascota=Milo, urlFotos=url2, idEtiqueta=1, nombreEtiqueta=Rescatado, estado=available})
+                                                1: Consultar una mascota por su ID ({recurso=/pet, idMascota=2403, idCategoria=2, nombreCategoria=Gatos, nombreMascota=Milo, urlFotos=url2, idEtiqueta=1, nombreEtiqueta=Rescatado, estado=available})
                                         </span>
                             </a>
                             <span class="evidence">
@@ -350,7 +354,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1s 107ms</span></td>
+                    <td width="100"><span class="top-level-step">1s 088ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -375,7 +379,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">003ms</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -393,7 +397,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Cuando configura la petición para añadir una nueva mascota con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>32346</td><td>2</td><td>Gatos</td><td>Milo</td><td>url2</td><td>1</td><td>Rescatado</td><td>available</td></tr></tbody></table>
+                                                Cuando crea una petición para añadir una nueva mascota en el recurso "/pet" con los siguientes datos:<br><table class='embedded'><thead><th>Id Mascota</th><th>Id Categoría</th><th>Nombre Categoría</th><th>Nombre Mascota</th><th>URL Fotos</th><th>Id Etiqueta</th><th>Nombre Etiqueta</th><th>Estado</th></thead><tbody><tr><td>2403</td><td>2</td><td>Gatos</td><td>Milo</td><td>url2</td><td>1</td><td>Rescatado</td><td>available</td></tr></tbody></table>
                                         </span>
                             </a>
                             <span class="evidence">
@@ -402,7 +406,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">511ms</span></td>
+                    <td width="100"><span class="nested-step">556ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -432,7 +436,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">500ms</span></td>
+                    <td width="100"><span class="nested-step">525ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -453,7 +457,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Mariana y Alexis executes a POST on the resource
+                                                Mariana y alexis post peticion
                                         </span>
                             </a>
                             <span class="evidence">
@@ -462,7 +466,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">486ms</span></td>
+                    <td width="100"><span class="nested-step">525ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -479,7 +483,7 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                POST https://petstore.swagger.io/v2/pet/
+                                                POST https://petstore.swagger.io/v2/pet
                                         </span>
                             <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -495,17 +499,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4>Response</h4>
-                                    <p>URL: https://petstore.swagger.io/v2/pet/</p>
+                                    <p>URL: https://petstore.swagger.io/v2/pet</p>
                                     <p>Status code: 200</p>
                                     <p>Content Type: application/json</p>
                                     <h4>Request Headers</h4>
                                     <pre>Accept=*/*<br>Content-Type=application/json</pre>
                                     <h4>Content Body</h4>
-                                    <pre>{<br>    &quot;id&quot;: 32346,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;id&quot;: 2403,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Date: Thu, 13 Mar 2025 23:27:08 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                    <pre>Date: Fri, 14 Mar 2025 05:17:54 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
                                 <h4>Response Body</h4>
-                                    <pre>{<br>    &quot;id&quot;: 32346,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;id&quot;: 2403,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Cookies</h4>
                                     <pre></pre>
                             </div>
@@ -548,7 +552,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Y configura la petición para consultar la mascota con el ID "32346"
+                                                Y crea una petición para consultar la mascota con el ID "2403" en el recurso "/pet"
                                         </span>
                             </a>
                             <span class="evidence">
@@ -557,7 +561,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">539ms</span></td>
+                    <td width="100"><span class="nested-step">532ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -578,7 +582,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Mariana y Alexis consulta la información de la mascota con ID 32346 en el recurso #recurso
+                                                Mariana y Alexis consulta la mascota con ID 2403
                                         </span>
                             </a>
                             <span class="evidence">
@@ -587,7 +591,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">522ms</span></td>
+                    <td width="100"><span class="nested-step">516ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -608,7 +612,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Mariana y Alexis executes a GET on the resource 32346
+                                                Mariana y alexis get peticion
                                         </span>
                             </a>
                             <span class="evidence">
@@ -634,7 +638,7 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                GET https://petstore.swagger.io/v2/pet/32346
+                                                GET https://petstore.swagger.io/v2/pet/2403
                                         </span>
                             <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -650,15 +654,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4>Response</h4>
-                                    <p>URL: https://petstore.swagger.io/v2/pet/32346</p>
+                                    <p>URL: https://petstore.swagger.io/v2/pet/2403</p>
                                     <p>Status code: 200</p>
                                     <p>Content Type: application/json</p>
                                     <h4>Request Headers</h4>
                                     <pre>Accept=*/*<br>Content-Type=application/json</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Date: Thu, 13 Mar 2025 23:27:08 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                    <pre>Date: Fri, 14 Mar 2025 05:17:55 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
                                 <h4>Response Body</h4>
-                                    <pre>{<br>    &quot;id&quot;: 32346,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;id&quot;: 2403,<br>    &quot;category&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;Gatos&quot;<br>    },<br>    &quot;name&quot;: &quot;Milo&quot;,<br>    &quot;photoUrls&quot;: [<br>        &quot;url2&quot;<br>    ],<br>    &quot;tags&quot;: [<br>        {<br>            &quot;id&quot;: 1,<br>            &quot;name&quot;: &quot;Rescatado&quot;<br>        }<br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Cookies</h4>
                                     <pre></pre>
                             </div>
@@ -689,41 +693,19 @@
 
                     <td width="70" class="step-icon">
                         <a name="0-3"></a>
-                            <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Entonces verifica el estado de la respuesta de dicha petición
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step"></span></td>
-                </tr>
-                <tr class="test-SUCCESS">
-
-                    <td width="70" class="step-icon">
-                        <a name="0-4"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-3')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection0-4 success-icon"
+                                <i class="bi bi-caret-right-square imgstepSection0-3 success-icon"
                                    style="margin-left: 40px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-3')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Y verifica que la información de la mascota consultada es "32346", "Milo", "available"
+                                                Entonces verifica el estado de la respuesta de dicha petición
                                         </span>
                             </a>
                             <span class="evidence">
@@ -732,15 +714,15 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">050ms</span></td>
+                    <td width="100"><span class="nested-step"></span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
-                            <table id="stepSection0-4" class="step-table-nested" style="display:none;">
+                            <table id="stepSection0-3" class="step-table-nested" style="display:none;">
                 <tr class="test-SUCCESS">
 
                     <td width="90" class="step-icon">
-                        <a name="0-4-0"></a>
+                        <a name="0-3-0"></a>
                             <span style="margin-left: 60px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
@@ -749,7 +731,7 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Then Los datos de la mascota consultada son correctos
+                                                Then El c&oacute;digo de respuesta es  should be (200)
                                         </span>
                             <span class="evidence">
                                 </span>
@@ -757,7 +739,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">034ms</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
 
                             </table>
@@ -770,7 +752,7 @@
             <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>1.11s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.09s</em></span></td>
             </tr>
 
         </table>

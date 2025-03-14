@@ -1,18 +1,20 @@
 package tasks;
 
+import interactions.DeletePeticion;
+import interactions.GetPeticion;
 import net.serenitybdd.annotations.Step;
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Delete;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class EliminarMascota implements Task {
 
     private final String idMascota;
+    private final String recurso;
 
-    public EliminarMascota(String idMascota) {
+    public EliminarMascota(String idMascota, String recurso) {
         this.idMascota = idMascota;
+        this.recurso = recurso;
     }
 
     @Step("{0} elimina la mascota con ID #idMascota")
@@ -20,13 +22,12 @@ public class EliminarMascota implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Delete.from(idMascota)
-                .with(request -> request)
+                DeletePeticion.deletePeticion(recurso + "/" + idMascota)
         );
-        SerenityRest.lastResponse().prettyPrint(); // Muestra la respuesta en consola
+
     }
 
-    public static EliminarMascota conId(String idMascota) {
-        return instrumented(EliminarMascota.class, idMascota);
+    public static EliminarMascota conId(String idMascota, String recurso) {
+        return instrumented(EliminarMascota.class, idMascota, recurso);
     }
 }

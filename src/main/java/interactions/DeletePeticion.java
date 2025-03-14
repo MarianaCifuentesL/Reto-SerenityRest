@@ -6,11 +6,11 @@ import net.serenitybdd.screenplay.rest.interactions.RestInteraction;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.rest.abilities.CallAnApi.as;
 
-public class GetPeticion extends RestInteraction {
+public class DeletePeticion extends RestInteraction {
 
     private final String recurso;
 
-    public GetPeticion(String recurso) {
+    public DeletePeticion(String recurso) {
         this.recurso = recurso;
     }
 
@@ -18,13 +18,13 @@ public class GetPeticion extends RestInteraction {
     public <T extends Actor> void performAs(T actor) {
         rest().
                 log().all().
-                get(as(actor).
+                delete(as(actor).
                         resolve(recurso)).
                 then().
                 log().all();
     }
 
-    public static GetPeticion getPeticion(String recurso) {
+    public static GetPeticion deletePeticion(String recurso) {
         return instrumented(GetPeticion.class, recurso);
     }
 }
