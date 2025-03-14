@@ -16,8 +16,9 @@ public class ConsultarMascota implements Task {
         this.recurso = recurso;
     }
 
-    @Step("{0} consulta la mascota con ID #idMascota")
+
     @Override
+    @Step("{0} consulta la mascota con ID #idMascota")
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(

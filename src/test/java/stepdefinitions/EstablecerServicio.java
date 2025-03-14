@@ -8,7 +8,7 @@ import static utils.Constantes.URL_BASE;
 
 public class EstablecerServicio {
 
-    public static final Actor actor = new Actor(ACTOR);
+    public static Actor actor = new Actor(ACTOR);
 
     protected void establecerServicio() {
         actor.can(CallAnApi.at(URL_BASE));
